@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Descent — the daily dive</title>
+<meta name="description" content="Seven prompts a day. Ordinary answers keep you near the surface. Rare ones take you down.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500&family=Fraunces:opsz,wght@9..144,300;9..144,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sunlight: #5fa8c7;
+    --twilight: #1b5573;
+    --midnight: #0a2438;
+    --abyss:    #03101c;
+    --glow:     #7defd0;
+    --sand:     #e6efec;
+    --silt:     #8aa3b0;
+
+    --water: var(--sunlight);
+    --ink: var(--sand);
+
+    --serif: "Fraunces", Georgia, serif;
+    --gauge: "Barlow Condensed", "Helvetica Neue", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--water);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 300;
+    transition: background-color 1.4s ease;
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+
+  /* ---- depth gauge ---- */
+  .gauge {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 1.5rem 0.75rem;
+    border-right: 1px solid rgba(230, 239, 236, 0.16);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--gauge);
+    font-weight: 300;
+    letter-spacing: 0.04em;
+  }
+
+  .readout { font-size: 2.1rem; line-height: 1; font-weight: 500; color: var(--glow); }
+  .readout span { font-size: 0.9rem; font-weight: 300; color: var(--silt); margin-left: 0.15rem; }
+  .zone-name { font-size: 0.95rem; color: var(--ink); opacity: 0.8; margin-top: 0.15rem; }
+
+  .track {
+    position: relative;
+    flex: 1;
+    margin: 1.25rem 0 0 0.4rem;
+    border-left: 1px solid rgba(230, 239, 236, 0.28);
+  }
+  .band {
+    position: absolute;
+    left: 0; right: 0;
+    padding-left: 0.5rem;
+    font-size: 0.78rem;
+    color: var(--silt);
+    border-top: 1px solid rgba(230, 239, 236, 0.18);
+  }
+  .band b { display: block; font-weight: 300; color: var(--ink); opacity: 0.55; font-size: 0.7rem; }
+  .marker {
+    position: absolute;
+    left: -0.42rem;
+    width: 0.8rem; height: 0.8rem;
+    border-radius: 50%;
+    background: var(--glow);
+    box-shadow: 0 0 0.9rem var(--glow);
+    transition: top 1.2s cubic-bezier(.22,.8,.3,1);
+  }
+
+  /* ---- main column ---- */
+  main {
+    padding: clamp(1.5rem, 6vh, 5rem) clamp(1.25rem, 6vw, 4rem);
+    max-width: 44rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  .counter {
+    font-family: var(--gauge);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--silt);
+    margin-bottom: 1.5rem;
+  }
+
+  .prompt {
+    font-size: clamp(1.75rem, 4.4vw, 2.85rem);
+    line-height: 1.22;
+    font-weight: 300;
+    margin: 0 0 0.6rem;
+    max-width: 22ch;
+  }
+  .kind { color: var(--silt); font-size: 1rem; margin: 0 0 2rem; font-style: italic; }
+
+  form { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+  input[type="text"] {
+    flex: 1 1 16rem;
+    background: rgba(3, 16, 28, 0.28);
+    border: 1px solid rgba(230, 239, 236, 0.3);
+    border-radius: 2px;
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    padding: 0.85rem 1rem;
+  }
+  input[type="text"]::placeholder { color: var(--silt); }
+  input[type="text"]:focus-visible,
+  button:focus-visible { outline: 2px solid var(--glow); outline-offset: 2px; }
+
+  button {
+    background: var(--glow);
+    color: #03101c;
+    border: 0;
+    border-radius: 2px;
+    font-family: var(--gauge);
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+    padding: 0.85rem 1.8rem;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.45; cursor: progress; }
+  button.quiet { background: none; color: var(--glow); border: 1px solid currentColor; }
+
+  .verdict { margin-top: 2rem; }
+  .verdict .gain {
+    font-family: var(--gauge);
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--glow);
+    line-height: 1;
+  }
+  .verdict .gain.nil { color: var(--silt); }
+  .verdict p { margin: 0.5rem 0 1.5rem; font-size: 1.15rem; }
+
+  .error { color: #ffb4a2; margin-top: 1rem; min-height: 1.4em; }
+
+  /* ---- reveal ---- */
+  .line { padding: 1.4rem 0; border-top: 1px solid rgba(230, 239, 236, 0.16); }
+  .line h3 { font-weight: 300; font-size: 1.25rem; margin: 0 0 0.6rem; }
+  .yours { font-size: 1.05rem; margin: 0 0 0.5rem; }
+  .yours em { font-style: normal; color: var(--glow); }
+  .bar { height: 3px; background: rgba(230, 239, 236, 0.18); margin: 0.6rem 0; }
+  .bar i { display: block; height: 100%; background: var(--glow); }
+  .common { font-size: 0.95rem; color: var(--silt); margin: 0; }
+
+  .final { font-family: var(--gauge); }
+  .final .big { font-size: clamp(3.5rem, 12vw, 6rem); font-weight: 500; color: var(--glow); line-height: 0.95; }
+
+  @media (max-width: 40rem) {
+    body { grid-template-columns: 1fr; }
+    .gauge {
+      position: static;
+      height: auto;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 0.8rem;
+      border-right: 0;
+      border-bottom: 1px solid rgba(230, 239, 236, 0.16);
+      padding: 1rem 1.25rem;
+    }
+    .track { display: none; }
+    main { min-height: auto; padding-top: 2rem; }
+  }
+</style>
+</head>
+<body>
+  <aside class="gauge">
+    <div>
+      <div class="readout" id="readout">0<span>m</span></div>
+      <div class="zone-name" id="zoneName">Sunlight</div>
+    </div>
+    <div class="track" id="track"><div class="marker" id="marker" style="top:0"></div></div>
+  </aside>
+
+  <main id="stage" aria-live="polite">
+    <p class="counter">Loading today's dive…</p>
+  </main>
+
+<script type="module">
+const FLOOR = 3500;              // a perfect run; sets the gauge's scale
+const stage    = document.getElementById("stage");
+const readout  = document.getElementById("readout");
+const zoneName = document.getElementById("zoneName");
+const track    = document.getElementById("track");
+const marker   = document.getElementById("marker");
+
+// Identity is a UUID this browser mints and keeps. No account, no password.
+let playerId = localStorage.getItem("diver");
+if (!playerId) {
+  playerId = crypto.randomUUID();
+  localStorage.setItem("diver", playerId);
+}
+
+const api = async (path, options = {}) => {
+  const res = await fetch(path, {
+    ...options,
+    headers: { "content-type": "application/json", "x-player-id": playerId, ...options.headers },
+  });
+  const data = await res.json().catch(() => ({ error: "The server sent something unreadable." }));
+  if (!res.ok) throw new Error(data.error || `Request failed (${res.status}).`);
+  return data;
+};
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+let state = null;
+
+// --- gauge -----------------------------------------------------------------
+function paintZones(zones) {
+  track.querySelectorAll(".band").forEach((b) => b.remove());
+  zones.forEach((z, i) => {
+    const band = document.createElement("div");
+    band.className = "band";
+    band.style.top = `${(z.at / FLOOR) * 100}%`;
+    const next = zones[i + 1];
+    band.style.height = `${(((next ? next.at : FLOOR) - z.at) / FLOOR) * 100}%`;
+    band.innerHTML = `${z.name}<b>${z.at} m</b>`;
+    track.append(band);
+  });
+}
+
+function setDepth(depth, zone) {
+  readout.innerHTML = `${depth}<span>m</span>`;
+  zoneName.textContent = zone.name;
+  marker.style.top = `${Math.min(100, (depth / FLOOR) * 100)}%`;
+
+  // The page itself sinks: water colour tracks the zone you're in.
+  const shade = { Sunlight: "--sunlight", Twilight: "--twilight", Midnight: "--midnight", Abyssal: "--abyss" };
+  document.documentElement.style.setProperty("--water", `var(${shade[zone.name] || "--sunlight"})`);
+}
+
+// --- screens ---------------------------------------------------------------
+function showPrompt(question) {
+  stage.innerHTML = `
+    <p class="counter">${question.index} of ${state.total}</p>
+    <h1 class="prompt">${esc(question.body)}</h1>
+    ${question.answerKind ? `<p class="kind">Answer with ${esc(question.answerKind)}.</p>` : ""}
+    <form id="answerForm">
+      <input type="text" id="answerInput" maxlength="60" autocomplete="off"
+             autocapitalize="off" spellcheck="false" placeholder="Your answer" aria-label="Your answer">
+      <button type="submit" id="go">Dive</button>
+    </form>
+    <p class="error" id="error"></p>`;
+
+  const form = document.getElementById("answerForm");
+  const input = document.getElementById("answerInput");
+  const go = document.getElementById("go");
+  const error = document.getElementById("error");
+  input.focus();
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const answer = input.value.trim();
+    if (!answer) return;
+
+    go.disabled = true;
+    go.textContent = "Scoring";
+    error.textContent = "";
+
+    try {
+      const result = await api("/api/submit", {
+        method: "POST",
+        body: JSON.stringify({ promptId: question.promptId, answer, pack: state.pack }),
+      });
+      setDepth(result.depth, result.zone);
+      showVerdict(answer, result);
+    } catch (err) {
+      error.textContent = err.message;
+      go.disabled = false;
+      go.textContent = "Dive";
+      input.select();
+    }
+  });
+}
+
+function showVerdict(answer, result) {
+  const gain = result.valid
+    ? `<div class="gain">−${result.meters}<span> m</span></div>`
+    : `<div class="gain nil">no descent</div>`;
+  const line = result.valid
+    ? `${esc(answer)} — ${esc(result.note || "")}`
+    : `${esc(answer)} isn't a valid answer to that one.`;
+
+  stage.innerHTML = `
+    <p class="counter">${result.answered} of ${result.total}</p>
+    <div class="verdict">
+      ${gain}
+      <p>${line}</p>
+      <button id="next">${result.completed ? "See the dive" : "Next prompt"}</button>
+    </div>`;
+
+  document.getElementById("next").focus();
+  document.getElementById("next").addEventListener("click", () => {
+    result.completed ? showReveal() : load();
+  });
+}
+
+async function showReveal() {
+  stage.innerHTML = `<p class="counter">Surfacing…</p>`;
+  const data = await api(`/api/reveal?pack=${encodeURIComponent(state.pack)}`);
+  setDepth(data.depth, data.zone);
+
+  const lines = data.lines.map((line) => {
+    const yours = line.yours;
+    const others = line.common.length
+      ? `Others said: ${line.common.map((c) => `${esc(c.answer)} (${c.count})`).join(", ")}`
+      : "Nobody else has answered this one yet.";
+    return `
+      <div class="line">
+        <h3>${esc(line.body)}</h3>
+        <p class="yours"><em>${esc(yours ? yours.answer : "—")}</em>${
+          yours && yours.valid ? ` · ${yours.meters} m` : " · no descent"
+        }</p>
+        <div class="bar"><i style="width:${yours ? yours.rarity : 0}%"></i></div>
+        <p class="common">${others}</p>
+      </div>`;
+  }).join("");
+
+  stage.innerHTML = `
+    <div class="final">
+      <div class="big">${data.depth}<span> m</span></div>
+      <p class="counter">${esc(data.zone.name)} — ${esc(data.zone.blurb)}</p>
+      <p class="counter">${data.rank} of ${data.divers} today · deepest so far ${data.best} m</p>
+    </div>
+    ${lines}
+    <div class="line">
+      <button class="quiet" id="share">Copy your dive</button>
+      <p class="error" id="error"></p>
+    </div>`;
+
+  document.getElementById("share").addEventListener("click", async () => {
+    const text = `Descent ${data.date} — ${data.depth} m (${data.zone.name})\n` +
+      data.lines.map((l) => "▁▂▃▄▅▆▇█"[Math.floor(((l.yours?.rarity ?? 0) / 101) * 8)]).join("");
+    try {
+      await navigator.clipboard.writeText(text);
+      document.getElementById("share").textContent = "Copied";
+    } catch {
+      document.getElementById("error").textContent = "Your browser blocked the clipboard.";
+    }
+  });
+}
+
+// --- boot ------------------------------------------------------------------
+async function load() {
+  try {
+    state = await api("/api/today");
+    paintZones(state.zones);
+    setDepth(state.depth, state.zone);
+
+    const next = state.questions.find((q) => !q.answered);
+    if (!next) return showReveal();
+    showPrompt(next);
+  } catch (err) {
+    stage.innerHTML = `<p class="counter">${esc(err.message)}</p>
+      <button class="quiet" onclick="location.reload()">Try again</button>`;
+  }
+}
+
+load();
+</script>
+</body>
+</html>
