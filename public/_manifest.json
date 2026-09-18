@@ -1,0 +1,557 @@
+{
+  "start_url": "https://krillion.io/",
+  "fetched_at": "2026-09-17T09:51:15-0400",
+  "total_bytes": 1788103,
+  "resources": [
+    {
+      "url": "https://krillion.io/_next/static/media/0c8c4ded07fff55c-s.p.2tcyrya9o07vu.woff2?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "_next/static/media/0c8c4ded07fff55c-s.p.2tcyrya9o07vu__q4074ed24.woff2",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/_next/static/chunks/3zjwxu8e1eb42.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/media/42b07301cbfb88de-s.01esg-5vzborl.woff2?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "_next/static/media/42b07301cbfb88de-s.01esg-5vzborl__q4074ed24.woff2",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/_next/static/chunks/3zjwxu8e1eb42.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/media/674d141a92451548-s.2n-wf6s8aqfs0.woff2?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "_next/static/media/674d141a92451548-s.2n-wf6s8aqfs0__q4074ed24.woff2",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/_next/static/chunks/3zjwxu8e1eb42.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC"
+      ]
+    },
+    {
+      "url": "https://krillion.io/apple-icon.png?apple-icon.24b26y9qhjk-g.png?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "apple-icon__q085cce1f.png",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/gen/optimized/v1/cards/geography.webp?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "gen/optimized/v1/cards/geography__q4074ed24.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/gen/optimized/v1/cards/lexicon.webp?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "gen/optimized/v1/cards/lexicon__q4074ed24.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/gen/optimized/v1/cards/movies.webp?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "gen/optimized/v1/cards/movies__q4074ed24.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/gen/optimized/v1/cards/music.webp?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "gen/optimized/v1/cards/music__q4074ed24.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/gen/optimized/v1/cards/sports.webp?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "gen/optimized/v1/cards/sports__q4074ed24.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/icon.png?icon.10narxa3_gvth.png?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "asset",
+      "local": "icon__q464e54d1.png",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/tiers/deepcut.png",
+      "kind": "asset",
+      "local": "tiers/deepcut.png",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/account"
+      ]
+    },
+    {
+      "url": "https://krillion.io/tiers/krillion.png",
+      "kind": "asset",
+      "local": "tiers/krillion.png",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account"
+      ]
+    },
+    {
+      "url": "https://krillion.io/tiers/rare.png",
+      "kind": "asset",
+      "local": "tiers/rare.png",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/account"
+      ]
+    },
+    {
+      "url": "https://krillion.io/tiers/schooler.png",
+      "kind": "asset",
+      "local": "tiers/schooler.png",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/account"
+      ]
+    },
+    {
+      "url": "https://krillion.io/water-bg.webp",
+      "kind": "asset",
+      "local": "water-bg.webp",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/_next/static/chunks/2r3v7vizz4q-w.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/02jn_ktivpkjx.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/02jn_ktivpkjx__q4074ed24.css",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/account",
+        "https://krillion.io/friends"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/1mocoxd98i93b.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/1mocoxd98i93b__q4074ed24.css",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/1sdnqd5asdcl8.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/1sdnqd5asdcl8__q4074ed24.css",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/2r3v7vizz4q-w.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/2r3v7vizz4q-w__q4074ed24.css",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/_next/static/chunks/2r3v7vizz4q-w.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3_kx93ti11bec.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/3_kx93ti11bec__q4074ed24.css",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3j9no1a_hemcb.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/3j9no1a_hemcb__q4074ed24.css",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3zjwxu8e1eb42.css?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "css",
+      "local": "_next/static/chunks/3zjwxu8e1eb42__q4074ed24.css",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/07z-finm_ff5d.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/07z-finm_ff5d__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/packs"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/0_bwf9t3lddf6.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/0_bwf9t3lddf6__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/0cz1d0mv5g_q7.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/0cz1d0mv5g_q7__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/0t1cupau1mtgy.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/0t1cupau1mtgy__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/0w6-77qsrgr9t.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/0w6-77qsrgr9t__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/friends"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/0xqeffprgr84u.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/0xqeffprgr84u__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/12ipbg36xyz91.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/12ipbg36xyz91__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/1ntn7efqc-iiw.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/1ntn7efqc-iiw__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/1zii31svdwhs2.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/1zii31svdwhs2__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/24pnyv0cy05i-.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/24pnyv0cy05i-__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/29as3trynm9qs.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/29as3trynm9qs__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/2m0__9bm3qc32.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/2m0__9bm3qc32__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3-8ij9y2yo451.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/3-8ij9y2yo451__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/371415z1n8432.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/371415z1n8432__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/account"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3_8t-sr_tj1-r.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/3_8t-sr_tj1-r__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3a-0ke44etq7m.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/3a-0ke44etq7m__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3im5zgwj-l9lc.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/3im5zgwj-l9lc__q4074ed24.js",
+      "depth": 2,
+      "referrers": [
+        "https://krillion.io/archive",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/3j7raku8mi1py.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/3j7raku8mi1py__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/_next/static/chunks/turbopack-2xdcsiplu4vqf.js?dpl=dpl_GBGoCFRxtiiPa5E4JoXkPPkCrnRC",
+      "kind": "js",
+      "local": "_next/static/chunks/turbopack-2xdcsiplu4vqf__q4074ed24.js",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/",
+        "https://krillion.io/account",
+        "https://krillion.io/archive",
+        "https://krillion.io/faq",
+        "https://krillion.io/friends",
+        "https://krillion.io/packs",
+        "https://krillion.io/unlimited/classic"
+      ]
+    },
+    {
+      "url": "https://krillion.io/",
+      "kind": "page",
+      "local": "index.html",
+      "depth": 0,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/account",
+      "kind": "page",
+      "local": "account.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/archive",
+      "kind": "page",
+      "local": "archive.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/faq",
+      "kind": "page",
+      "local": "faq.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/friends",
+      "kind": "page",
+      "local": "friends.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/packs",
+      "kind": "page",
+      "local": "packs.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    },
+    {
+      "url": "https://krillion.io/unlimited/classic",
+      "kind": "page",
+      "local": "unlimited/classic.html",
+      "depth": 1,
+      "referrers": [
+        "https://krillion.io/"
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://krillion.io/_next/static/chunks/%23n",
+      "error": "404 Client Error: Not Found for url: https://krillion.io/_next/static/chunks/%23n"
+    }
+  ]
+}
